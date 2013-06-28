@@ -42,12 +42,13 @@
  */
  
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// Simon Says MAGIC! - Additional implimentation of the classic magic trick button/light box.
+// Simon Says MAGIC! V1.0 - Additional implimentation of the classic magic trick buttons & light box.
 // Coded 6/2013 by Christopher "Centaur" Dunn. Hold Lower Left (Blue) button while turing on
-// to go into Magic Trick mode. See http://www.centaur.org/simonsaysmagic/index.html
+// to go into Magic Trick mode. See http://www.centaur.org/simonsaysmagic/
 // Also released to the Public Domain under the Open Source Beerware License.
-// Much thanks to Spark Fun Electronics, Nathan Seidle, Joshua Neal, and all Open Source Coders!
+// Much thanks to SparkFun Electronics, Nathan Seidle, Joshua Neal, and all Open Source Coders!
 // Developed and tested for Simon Says PTH kit, Circa 2013. Should work for others as well.
+// Assumes: Blue - lower left. Red - upper left. Yellow - lower right. Green - upper right.
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 #include "hardware_versions.h"
