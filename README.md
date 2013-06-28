@@ -1,19 +1,20 @@
-Simon Says
+Simon Says MAGIC!
 ==========
 
-[![Simon Says](https://dlnmh9ip6v2uc.cloudfront.net/images/products/1/0/5/4/7/Simon_Action.jpg)  
+[![Simon Says MAGIC!](http://www.centaur.org/simonsaysmagic/simonsaysmagic.png)  
 *Simon Says (KIT-10547)*](https://www.sparkfun.com/products/10547)
+
+This firmware adds a MAGIC! trick to the Sparkfun Simon Says kit. See http://Sparkfun.com or http://www.centaur.org/simonsaysmagic/
 
 Simon Says is an open source hardware memory game that teaches through-hole soldering basics. 
 
-The firmware was developed in Arduino v1.0. The Eagle files were developed in Eagle v5.1. You will need these versions or newer to open the files. 
+The firmware was developed in Arduino v1.0.
 
 Repository Contents
 -------------------
 
-* **/Firmware** - Stock firmware the board ships with, as well as additional example code 
-* **/Hardware** - All Eagle design files (.brd, .sch, .STL)
-* **/Production** - Test bed files and production panel files
+* **/Firmware** - Modified firmware as of 6/28/2013 V1.0 - To add the MAGIC! function to the stock firmware.
+
 
 
 Product Versions
