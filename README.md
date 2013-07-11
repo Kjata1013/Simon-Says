@@ -14,7 +14,7 @@ Repository Contents
 -------------------
 
 * **/Firmware** - Modified firmware as of 6/28/2013 V1.0 - To add the MAGIC! function to the stock firmware.
-
+* **/Firmware** - Modified firmware as of 7/11/2013 V1.1 - Added button sound feedback.
 
 
 Product Versions
