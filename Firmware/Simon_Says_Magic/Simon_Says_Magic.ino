@@ -2,6 +2,7 @@
  Started: 6-19-2007
  Spark Fun Electronics
  Nathan Seidle
+ // With Simon Says MAGIC! V1.1 7/11/2013
  
  Simon Says is a memory game. Start the game by pressing one of the four buttons. When a button lights up, 
  press the button, repeating the sequence. The sequence will get longer and longer. The game is won after 
@@ -42,13 +43,14 @@
  */
  
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// Simon Says MAGIC! V1.0 - Additional implimentation of the classic magic trick buttons & light box.
+// Simon Says MAGIC! V1.1 - Additional implimentation of the classic magic trick buttons & light box.
 // Coded 6/2013 by Christopher "Centaur" Dunn. Hold Lower Left (Blue) button while turing on
 // to go into Magic Trick mode. See http://www.centaur.org/simonsaysmagic/
 // Also released to the Public Domain under the Open Source Beerware License.
 // Much thanks to SparkFun Electronics, Nathan Seidle, Joshua Neal, and all Open Source Coders!
 // Developed and tested for Simon Says PTH kit, Circa 2013. Should work for others as well.
 // Assumes: Blue - lower left. Red - upper left. Yellow - lower right. Green - upper right.
+// Ver 1.1 - Added button sound feedback and tweaked debounce. 7/11/2013
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 #include "hardware_versions.h"
@@ -509,7 +511,7 @@ void do_magic()                // Main Entry Here <---
          {
            LED_YBGR = CHOICE_RED;      //Turn on Red LED because last button push has all 4 buttons on.
            setLEDs(CHOICE_RED);
-           buzz_sound(255, 1500);      //Play a tone
+           buzz_sound(500, 600);      //Play a tone
          } else {
            LED_YBGR = CHOICE_OFF;      //Turn off LEDs because last button push toggled button off.
            setLEDs(CHOICE_OFF);
@@ -525,7 +527,7 @@ void do_magic()                // Main Entry Here <---
          {
            LED_YBGR = CHOICE_GREEN;     //Turn on Green LED
            setLEDs(CHOICE_GREEN);
-           buzz_sound(255, 1500);
+           buzz_sound(500, 600);
          } else {
            LED_YBGR = CHOICE_OFF;       //Turn off LEDs
            setLEDs(CHOICE_OFF);
@@ -541,7 +543,7 @@ void do_magic()                // Main Entry Here <---
          {
            LED_YBGR = CHOICE_BLUE;      //Turn on Blue LED
            setLEDs(CHOICE_BLUE);
-           buzz_sound(255, 1500);
+           buzz_sound(500, 600);
          } else {
            LED_YBGR = CHOICE_OFF;       //Turn off LEDs
            setLEDs(CHOICE_OFF);
@@ -557,7 +559,7 @@ void do_magic()                // Main Entry Here <---
          {
            LED_YBGR = CHOICE_YELLOW;    //Turn on Yellow LED
            setLEDs(CHOICE_YELLOW);
-           buzz_sound(255, 1500);
+           buzz_sound(500, 600);
          } else {
            LED_YBGR = CHOICE_OFF;       //Turn off LEDs
            setLEDs(CHOICE_OFF);
@@ -581,9 +583,11 @@ byte wait_for_magic_button(void)
     byte button = checkMagicButton();
     if (button != CHOICE_NONE)
     { 
-      delay(150);  //Some debouncing. Increase if buttons are double bouncing.
+      delay(100);  //Some debouncing. Increase if buttons are double bouncing.
+      buzz_sound(50, 700);
       while(checkMagicButton() != CHOICE_NONE) ;  // Now let's wait for user to release button
-      delay(150); // Some more debouncing. Increase if buttons are double bouncing.
+      delay(100); // Some more debouncing. Increase if buttons are double bouncing.
+      buzz_sound(50, 500);
       return button; // Send button pressed back to calling routine.
     }
   }
