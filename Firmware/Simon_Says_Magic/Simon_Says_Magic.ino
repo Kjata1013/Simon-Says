@@ -511,7 +511,7 @@ void do_magic()                // Main Entry Here <---
          {
            LED_YBGR = CHOICE_RED;      //Turn on Red LED because last button push has all 4 buttons on.
            setLEDs(CHOICE_RED);
-           buzz_sound(500, 600);      //Play a tone
+           buzz_sound(250, 600);      //Play a tone
          } else {
            LED_YBGR = CHOICE_OFF;      //Turn off LEDs because last button push toggled button off.
            setLEDs(CHOICE_OFF);
@@ -527,7 +527,7 @@ void do_magic()                // Main Entry Here <---
          {
            LED_YBGR = CHOICE_GREEN;     //Turn on Green LED
            setLEDs(CHOICE_GREEN);
-           buzz_sound(500, 600);
+           buzz_sound(250, 600);
          } else {
            LED_YBGR = CHOICE_OFF;       //Turn off LEDs
            setLEDs(CHOICE_OFF);
@@ -543,7 +543,7 @@ void do_magic()                // Main Entry Here <---
          {
            LED_YBGR = CHOICE_BLUE;      //Turn on Blue LED
            setLEDs(CHOICE_BLUE);
-           buzz_sound(500, 600);
+           buzz_sound(250, 600);
          } else {
            LED_YBGR = CHOICE_OFF;       //Turn off LEDs
            setLEDs(CHOICE_OFF);
@@ -559,7 +559,7 @@ void do_magic()                // Main Entry Here <---
          {
            LED_YBGR = CHOICE_YELLOW;    //Turn on Yellow LED
            setLEDs(CHOICE_YELLOW);
-           buzz_sound(500, 600);
+           buzz_sound(250, 600);
          } else {
            LED_YBGR = CHOICE_OFF;       //Turn off LEDs
            setLEDs(CHOICE_OFF);
